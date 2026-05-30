@@ -121,8 +121,8 @@ const serviceCategories: ServiceCategory[] = [
    summary: "協助處理就醫、購物、外出與代辦需求，讓家庭在照護之外，也能維持日常生活運作。",
    columns: 2,
    items: [
-     { name: "陪同外出（30分）", detail: "陪伴購物、社交活動、辦理事務、用餐、散步、服務活動、復健、洗腎、運動等，不含交通服務。", icon: <Footprints size={20} /> },
-     { name: "陪同就醫（1.5時）", detail: "協助掛號（含預約）、陪同就診、聽取與轉知醫囑、提醒注意事項，自案家出門起算 1.5 小時內適用。", icon: <MedicalIcon size={20} /> },
+     { name: "陪同外出", detail: "陪伴購物、社交活動、辦理事務、用餐、散步、服務活動、復健、洗腎、運動等，不含交通服務。", icon: <Footprints size={20} /> },
+     { name: "陪同就醫", detail: "協助掛號（含預約）、陪同就診、聽取與轉知醫囑、提醒注意事項，自案家出門起算 1.5 小時內適用。", icon: <MedicalIcon size={20} /> },
    ],
  },
  {
@@ -155,8 +155,8 @@ const serviceCategories: ServiceCategory[] = [
    summary: "不只照顧身體，也照顧情緒與安全感，適合需要看視、陪伴、認知支持或定時巡視的個案。",
    columns: 3,
    items: [
-     { name: "安全看視（30分）", detail: "至案家陪伴、支持如遊戲或嗜好，看視安全或協助日常生活參與，並注意異常狀況。", icon: <Eye size={20} /> },
-     { name: "陪伴服務（30分）", detail: "至案家陪伴看視、日常生活參與，或讀紙本、電子新聞與書信。", icon: <Users2 size={20} /> },
+     { name: "安全看視", detail: "至案家陪伴、支持如遊戲或嗜好，看視安全或協助日常生活參與，並注意異常狀況。", icon: <Eye size={20} /> },
+     { name: "陪伴服務", detail: "至案家陪伴看視、日常生活參與，或讀紙本、電子新聞與書信。", icon: <Users2 size={20} /> },
      { name: "巡視服務", detail: "上午 6 點至下午 6 點進行探視與簡易協助，至少 3 次。", icon: <Search size={20} /> },
    ],
  },
