@@ -293,7 +293,9 @@ export default function HomePage() {
               協助您建立專業價值，讓更多真正有需求的家庭看見您。
             </p>
 
-            <Link href="/recruit-detail">成為照護夥伴</Link>
+            <Link href="/recruit-detail" className="recruit-btn">
+  成為照護夥伴
+</Link>
           </div>
 
           <div className="recruit-image">
@@ -680,16 +682,20 @@ export default function HomePage() {
           box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
         }
 
-        .recruit-card a {
-          display: inline-flex;
-          margin-top: 24px;
-          padding: 14px 24px;
-          border-radius: 14px;
-          border: 1px solid #10b981;
-          color: #059669;
-          font-weight: 900;
-          text-decoration: none;
-        }
+        .recruit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 14px 24px;
+  border-radius: 14px;
+  border: 1px solid #10b981;
+  background: #10b981;
+  color: white !important;
+  font-weight: 900;
+  text-decoration: none;
+  min-width: 170px;
+}
 
         .recruit-image {
           height: 390px;
