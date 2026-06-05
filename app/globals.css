@@ -211,43 +211,6 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  .mobile-menu-button {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .site-menu {
-    display: none !important;
-    width: 100% !important;
-  }
-
-  .site-menu-open {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 16px !important;
-    padding-top: 12px !important;
-  }
-
-  .site-menu nav {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 12px !important;
-  }
-
-  .site-menu nav a,
-  .site-menu nav button {
-    width: 100% !important;
-    text-align: center !important;
-    justify-content: center !important;
-  }
-
-  .site-menu > div {
-    width: 100% !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-  }
 
   .footer-grid {
     grid-template-columns: 1fr !important;
@@ -277,12 +240,12 @@ textarea {
 @media (max-width: 768px) {
   .home-hero {
     min-height: auto !important;
-    padding: 96px 0 72px !important;
+    padding: 24px 0 48px !important;
     align-items: flex-start !important;
   }
 
   .home-hero-content-wrapper {
-    padding: 0 20px !important;
+    padding: 0 22px !important;
   }
 
   .home-hero-text {
@@ -291,17 +254,21 @@ textarea {
   }
 
   .home-hero-title {
-    font-size: 42px !important;
-    line-height: 1.15 !important;
+    font-size: 44px !important;
+    line-height: 1.08 !important;
+    margin-bottom: 18px !important;
   }
 
   .home-hero-subtitle {
     font-size: 16px !important;
     line-height: 1.8 !important;
+    margin-bottom: 24px !important;
   }
 
   .home-button-row {
-    flex-direction: column !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
   }
 
   .home-button-row button,
@@ -309,54 +276,81 @@ textarea {
     width: 100% !important;
   }
 
+  /* SECTION */
+
+  .home-section {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+
+  .home-section-title {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* SERVICES */
+
   .home-service-grid {
     grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 
   .home-service-card {
     grid-template-columns: 1fr !important;
     height: auto !important;
+    overflow: hidden !important;
   }
 
   .home-card-image-area {
     height: 180px !important;
   }
 
+  /* CONSULT */
+
   .home-consult-section {
-    padding: 72px 20px !important;
+    padding: 60px 20px !important;
   }
 
   .home-consult-container {
     grid-template-columns: 1fr !important;
-    gap: 36px !important;
+    gap: 32px !important;
+  }
+
+  .home-form-card {
+    padding: 22px !important;
   }
 
   .home-form-two-col {
     grid-template-columns: 1fr !important;
   }
 
-  .home-form-card {
-    padding: 24px !important;
-  }
+  /* RECRUIT */
 
   .home-recruit-section {
     grid-template-columns: 1fr !important;
-    padding: 28px !important;
-    border-radius: 24px !important;
+    gap: 24px !important;
+    padding: 24px !important;
   }
 
   .home-recruit-image-wrap {
-    height: 240px !important;
+    height: 220px !important;
   }
+
+}
+
+/* iPhone */
+
+@media (max-width: 430px) {
+
+  .home-hero-title {
+  font-size: 38px !important;
+  line-height: 1.12 !important;
+}
 
   .home-section-title {
-    font-size: 32px !important;
+    font-size: 28px !important;
   }
 
-  .home-section {
-    padding-top: 64px !important;
-    padding-bottom: 64px !important;
-  }
 }
 
 @media (max-width: 768px) {
