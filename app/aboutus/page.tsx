@@ -192,7 +192,7 @@ export default function AboutUsPage() {
         <div className="cta">
           <div>
             <span>START WITH CAREBRIDGE</span>
-            <h2>讓我們一起把照護這件事，做得更安心一點</h2>
+            <h2>讓我們一起把照護這件事，做得更安心</h2>
             <p>無論你是正在尋找照護支持的家庭，或希望加入平台的專業照護夥伴。</p>
           </div>
 
@@ -538,11 +538,11 @@ export default function AboutUsPage() {
   background: #0f172a;
   color: #ffffff;
   border-radius: 34px;
-  padding: 42px 36px;
+  padding: 42px 60px;
   display: flex;
   justify-content: space-between;
-  gap: 48px;
   align-items: center;
+  gap: 80px;
   margin-bottom: 100px;
 }
 
@@ -556,9 +556,10 @@ export default function AboutUsPage() {
 }
 
         .cta h2 {
-          color: #ffffff;
-          margin-bottom: 12px;
-        }
+  color: #ffffff;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
 
         .cta p {
           color: rgba(255, 255, 255, 0.78);
