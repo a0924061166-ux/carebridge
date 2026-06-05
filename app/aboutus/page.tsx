@@ -10,7 +10,6 @@ import {
   ChevronRight,
   CheckCircle2,
   Sparkles,
-  ArrowRight,
 } from "lucide-react";
 
 export default function AboutUsPage() {
@@ -198,9 +197,13 @@ export default function AboutUsPage() {
           </div>
 
           <div className="cta-actions">
-            <Link href="/#consult">免費諮詢 <ArrowRight size={16} /></Link>
-            <Link href="/recruit-detail">加入照護夥伴</Link>
-          </div>
+  <Link href="/#consult" className="cta-primary-btn">
+    免費諮詢
+  </Link>
+  <Link href="/recruit-detail" className="cta-secondary-btn">
+    加入照護夥伴
+  </Link>
+</div>
         </div>
       </section>
 
@@ -530,26 +533,27 @@ export default function AboutUsPage() {
         }
 
         .cta-actions a {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          padding: 14px 22px;
-          border-radius: 999px;
-          text-decoration: none;
-          font-weight: 900;
-          color: #ffffff;
-          white-space: nowrap;
-        }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 900;
+  white-space: nowrap;
+  min-width: 150px;
+}
 
-        .cta-actions a:first-child {
-          background: #10b981;
-        }
+.cta-primary-btn {
+  background: #10b981;
+  color: #ffffff !important;
+}
 
-        .cta-actions a:last-child {
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.18);
-        }
+.cta-secondary-btn {
+  background: #ffffff;
+  color: #0f172a !important;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
         @media (max-width: 768px) {
           .about-hero {
