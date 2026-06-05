@@ -269,6 +269,35 @@ textarea {
   }
 }
 
+/* ===== Desktop Menu Fix ===== */
+@media (min-width: 769px) {
+  .mobile-menu-button {
+    display: none !important;
+  }
+
+  .site-menu {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex: 1 !important;
+    width: auto !important;
+    gap: 20px !important;
+  }
+
+  .site-menu nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .site-menu > div {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: auto !important;
+  }
+}
 /* ===== Home Mobile ===== */
 @media (max-width: 768px) {
   .home-hero {
