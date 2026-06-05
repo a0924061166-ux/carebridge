@@ -293,8 +293,8 @@ export default function HomePage() {
               協助您建立專業價值，讓更多真正有需求的家庭看見您。
             </p>
 
-            <Link href="/recruit-detail" className="recruit-btn">
-  成為照護夥伴
+            <Link href="/recruit-detail" legacyBehavior>
+  <a className="recruit-btn">成為照護夥伴</a>
 </Link>
           </div>
 
