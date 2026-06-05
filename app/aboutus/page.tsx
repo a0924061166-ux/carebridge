@@ -538,21 +538,25 @@ export default function AboutUsPage() {
   background: #0f172a;
   color: #ffffff;
   border-radius: 34px;
-  padding: 42px 60px;
+  padding: 42px 42px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 80px;
+  gap: 36px;
   margin-bottom: 100px;
 }
 
 .cta > div:first-child {
   flex: 1;
+  min-width: 0;
 }
 
 .cta-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
   flex-shrink: 0;
-  margin-left: 40px;
+  margin-left: 0;
 }
 
         .cta h2 {
@@ -565,11 +569,7 @@ export default function AboutUsPage() {
           color: rgba(255, 255, 255, 0.78);
         }
 
-        .cta-actions {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 12px;
-        }
+
 
         .cta-actions a {
   display: inline-flex;
