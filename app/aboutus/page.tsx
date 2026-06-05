@@ -535,16 +535,25 @@ export default function AboutUsPage() {
         }
 
         .cta {
-          background: #0f172a;
-          color: #ffffff;
-          border-radius: 34px;
-          padding: 42px 36px;
-          display: flex;
-          justify-content: space-between;
-          gap: 24px;
-          align-items: center;
-          margin-bottom: 100px;
-        }
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 34px;
+  padding: 42px 36px;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.cta > div:first-child {
+  flex: 1;
+}
+
+.cta-actions {
+  flex-shrink: 0;
+  margin-left: 40px;
+}
 
         .cta h2 {
           color: #ffffff;
