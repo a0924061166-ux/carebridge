@@ -68,11 +68,7 @@ export default function RecruitDetailPage() {
   return (
     <main className="recruit-page" style={pageStyle}>
       <section className="recruit-container" style={containerStyle}>
-        <div style={{ marginBottom: 18 }}>
-          <Link href="/" style={backLinkStyle}>
-            ← 返回首頁
-          </Link>
-        </div>
+        
 
         <section className="recruit-hero" style={heroSectionStyle}>
           <div className="recruit-hero-text" style={heroTextWrapStyle}>
@@ -399,14 +395,12 @@ export default function RecruitDetailPage() {
               padding: 12px 20px 72px !important;
             }
           
-            const benefitCardLargeStyle: React.CSSProperties = {
-  background: "linear-gradient(135deg, #111827 0%, #1f2937 100%)",
-  color: "#fff",
-  borderRadius: "30px",
-  padding: "34px",
-  minHeight: "100%",
-};
-
+          
+            .benefit-card-large {
+  min-height: auto !important;
+  padding: 26px 22px !important;
+}
+  
             .recruit-hero {
               grid-template-columns: 1fr !important;
               gap: 30px !important;
@@ -524,12 +518,7 @@ const containerStyle: React.CSSProperties = {
   padding: "12px 20px 100px",
 };
 
-const backLinkStyle: React.CSSProperties = {
-  textDecoration: "none",
-  color: "#10b981",
-  fontWeight: 700,
-  fontSize: "15px",
-};
+
 
 const sectionSpacingStyle: React.CSSProperties = {
   paddingTop: "84px",
