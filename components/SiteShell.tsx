@@ -22,12 +22,14 @@ export default function SiteShell({
  const [isAdmin, setIsAdmin] = useState(false);
  const [accountType, setAccountType] = useState<string | null>(null);
  const [fullName, setFullName] = useState<string>("使用者");
+ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 
  const openLoginAndRedirectTo = (path: string) => {
    sessionStorage.setItem("post_login_redirect", path);
    setAuthMode("login");
    setAuthOpen(true);
+   setMobileMenuOpen(false);
  };
 
 
@@ -150,31 +152,45 @@ export default function SiteShell({
    profileHref = "/admin";
  }
 
+ const closeMobileMenu = () => {
+   setMobileMenuOpen(false);
+ };
+
 
  return (
    <>
      <div style={headerOuterStyle}>
        <div style={headerInnerStyle}>
          <header style={headerStyle}>
-           <Link href="/" style={logoStyle}>
+           <Link href="/" style={logoStyle} onClick={closeMobileMenu}>
              CareBridge<span style={{ color: "#10b981" }}>.</span>
            </Link>
 
+           <button
+             type="button"
+             className="mobile-menu-button"
+             style={mobileMenuButtonStyle}
+             onClick={() => setMobileMenuOpen((prev) => !prev)}
+             aria-label="開啟選單"
+           >
+             {mobileMenuOpen ? "×" : "☰"}
+           </button>
 
+           <div className={mobileMenuOpen ? "site-menu site-menu-open" : "site-menu"}>
            <nav style={navStyle}>
-             <Link href="/aboutus" style={navLink}>
+             <Link href="/aboutus" style={navLink} onClick={closeMobileMenu}>
                關於我們
              </Link>
 
 
-             <Link href="/services" style={navLink}>
+             <Link href="/services" style={navLink} onClick={closeMobileMenu}>
                服務項目
              </Link>
 
 
              {accountType !== "provider" &&
                (user ? (
-                 <Link href="/booking" style={bookingNavLinkStyle}>
+                 <Link href="/booking" style={bookingNavLinkStyle} onClick={closeMobileMenu}>
                    預約申請
                  </Link>
                ) : (
@@ -188,35 +204,35 @@ export default function SiteShell({
                ))}
 
 
-             <a href="/#consult" style={navLink}>
+             <a href="/#consult" style={navLink} onClick={closeMobileMenu}>
                免費諮詢
              </a>
 
 
-             <Link href="/recruit-detail" style={navLink}>
+             <Link href="/recruit-detail" style={navLink} onClick={closeMobileMenu}>
                招募人員
              </Link>
 
 
              {accountType === "provider" && (
-               <Link href="/care-requests" style={navLink}>
+               <Link href="/care-requests" style={navLink} onClick={closeMobileMenu}>
                  案件需求看板
                </Link>
              )}
 
 
-             <Link href="/provider-profile" style={highlightNavLink}>
+             <Link href="/provider-profile" style={highlightNavLink} onClick={closeMobileMenu}>
                我們的照護人員
              </Link>
            </nav>
 
 
-           <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+           <div style={authAreaStyle}>
              {user ? (
                <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
                  <div style={{ textAlign: "right" }}>
                    {profileHref ? (
-                     <Link href={profileHref} style={userNameLinkStyle}>
+                     <Link href={profileHref} style={userNameLinkStyle} onClick={closeMobileMenu}>
                        {fullName}
                      </Link>
                    ) : (
@@ -245,6 +261,7 @@ export default function SiteShell({
                    onClick={() => {
                      setAuthMode("login");
                      setAuthOpen(true);
+                     closeMobileMenu();
                    }}
                  >
                    登入
@@ -254,12 +271,14 @@ export default function SiteShell({
                    onClick={() => {
                      setAuthMode("register");
                      setAuthOpen(true);
+                     closeMobileMenu();
                    }}
                  >
                    立即註冊
                  </button>
                </>
              )}
+           </div>
            </div>
          </header>
        </div>
@@ -702,6 +721,25 @@ const headerStyle: React.CSSProperties = {
  alignItems: "center",
  flexWrap: "wrap",
  gap: "16px",
+};
+
+
+const authAreaStyle: React.CSSProperties = {
+ display: "flex",
+ gap: "12px",
+ alignItems: "center",
+};
+
+
+const mobileMenuButtonStyle: React.CSSProperties = {
+ display: "none",
+ border: "1px solid #d1d5db",
+ background: "#ffffff",
+ borderRadius: "12px",
+ padding: "8px 12px",
+ fontSize: "22px",
+ cursor: "pointer",
+ lineHeight: 1,
 };
 
 
