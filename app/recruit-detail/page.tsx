@@ -265,7 +265,7 @@ export default function RecruitDetailPage() {
           </div>
 
           <div className="benefit-wrap" style={benefitWrapStyle}>
-            <div style={benefitCardLargeStyle}>
+            <div className="benefit-card-large" style={benefitCardLargeStyle}>
               <h3 style={benefitTitleStyle}>更自由的工作節奏</h3>
               <p style={benefitTextStyle}>
                 適合兼職、斜槓或想逐步建立穩定案源的照護者。你可以決定自己想接哪些類型、在哪些區域、什麼時段服務。
@@ -398,6 +398,14 @@ export default function RecruitDetailPage() {
             .recruit-container {
               padding: 12px 20px 72px !important;
             }
+          
+            const benefitCardLargeStyle: React.CSSProperties = {
+  background: "linear-gradient(135deg, #111827 0%, #1f2937 100%)",
+  color: "#fff",
+  borderRadius: "30px",
+  padding: "34px",
+  minHeight: "100%",
+};
 
             .recruit-hero {
               grid-template-columns: 1fr !important;
@@ -877,7 +885,6 @@ const benefitCardLargeStyle: React.CSSProperties = {
   color: "#fff",
   borderRadius: "30px",
   padding: "34px",
-  minHeight: "100%",
 };
 
 const benefitTitleStyle: React.CSSProperties = {
