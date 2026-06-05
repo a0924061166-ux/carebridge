@@ -197,10 +197,39 @@ export default function AboutUsPage() {
           </div>
 
           <div className="cta-actions">
-  <Link href="/#consult" className="cta-primary-btn">
+  <Link
+    href="/#consult"
+    style={{
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "14px 24px",
+      borderRadius: "999px",
+      background: "#10b981",
+      color: "#ffffff",
+      fontWeight: 900,
+      textDecoration: "none",
+      minWidth: "150px",
+    }}
+  >
     免費諮詢
   </Link>
-  <Link href="/recruit-detail" className="cta-secondary-btn">
+
+  <Link
+    href="/recruit-detail"
+    style={{
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "14px 24px",
+      borderRadius: "999px",
+      background: "#ffffff",
+      color: "#0f172a",
+      fontWeight: 900,
+      textDecoration: "none",
+      minWidth: "150px",
+    }}
+  >
     加入照護夥伴
   </Link>
 </div>
